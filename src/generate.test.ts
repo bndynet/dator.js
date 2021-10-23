@@ -1,4 +1,5 @@
 import { generate } from './generate';
+import { generateWeekdays } from './generates';
 
 test('generate: simple', () => {
   const arrayLength = 3;
@@ -16,6 +17,9 @@ test('generate: array', () => {
 test('generate: advanced', () => {
   const arrayLength = 10;
   const d = generate(arrayLength, {
+    day: {
+      type: generateWeekdays(),
+    },
     name: {
       type: 'username',
     },

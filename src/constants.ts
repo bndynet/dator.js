@@ -73,13 +73,15 @@ export const handlers = {
   url: () => {
     return faker.internet.url();
   },
-  date: undefined,
   datetime: () => {
     return faker.date.past();
   },
   month: () => {
     return faker.date.month();
   },
+
+  // implements
+  date: undefined,
 };
 
 
