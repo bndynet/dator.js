@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/bndynet/dator.js/compare/v1.0.0...v1.0.1) (2024-07-31)
+
+
+### Bug Fixes
+
+* minify output ([a72c8aa](https://github.com/bndynet/dator.js/commit/a72c8aaa5ae2ebd1c045952839cb5eaba5346175))
+
 # 1.0.0 (2024-07-30)
 
 
