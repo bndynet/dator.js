@@ -3,7 +3,7 @@
 ## CDN
 
 ```html
-<script src="https://unpkg.com/@bndynet/dator/dist/index.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@bndynet/dator/dist/index.js"></script>
 
 <script>
   // dator.generate(...)
