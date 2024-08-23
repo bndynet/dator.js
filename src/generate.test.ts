@@ -6,6 +6,13 @@ test('generate: simple', () => {
   expect(d.length).toBe(arrayLength);
 });
 
+test('generate: array', () => {
+  const arrayLength = 3;
+  const d = generate(arrayLength, [{fieldName: 'name', type: 'city'}, { fieldName: 'value', type: 'number'}]);
+  console.log('generate: array', d);
+  expect(d.length).toBe(arrayLength);
+});
+
 test('generate: advanced', () => {
   const arrayLength = 10;
   const d = generate(arrayLength, {
