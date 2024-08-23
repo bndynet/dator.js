@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/bndynet/dator.js/compare/v1.0.1...v1.1.0) (2024-08-23)
+
+
+### Features
+
+* support more args ([1866518](https://github.com/bndynet/dator.js/commit/1866518de390d912020f071c8c67f2f638621ef4))
+
 ## [1.0.1](https://github.com/bndynet/dator.js/compare/v1.0.0...v1.0.1) (2024-07-31)
 
 
