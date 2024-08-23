@@ -1,4 +1,5 @@
-import { DataType, handlers } from "./constants";
+import { faker } from '@faker-js/faker';
+import { DataType, handlers } from './constants';
 
 export function generateTimestamps(
   count: number,
@@ -36,18 +37,51 @@ export function generateTimestamps(
   return result.reverse();
 }
 
-export function generateValue(type: DataType, args?: any) {
+export function generateValue(
+  type: DataType | Array<any>,
+  args?: any,
+  excludes?: Array<any>
+) {
   let value;
   if (type) {
-    const handler = handlers[type] as Function;
-    if (handler) {
-      value = handler(args);
-    } else {
-      if (type === 'date') {
-        value = generateTimestamps(1, 'day')[0];
+    if (typeof type === 'string') {
+      const handler = handlers[type] as Function;
+      if (handler) {
+        value = handler(args);
+      } else {
+        if (type === 'date') {
+          value = generateTimestamps(1, 'day')[0];
+        }
       }
+    } else if (Array.isArray(type)) {
+      value =
+        (excludes && excludes.length < type.length)
+          ? type.find((t) => !excludes?.includes(t))
+          : type[generateRandomInt(0, type.length - 1)];
     }
   }
 
   return value;
+}
+
+export function generateMonths(abbr?: boolean): string[] {
+  return (
+    abbr
+      ? faker.definitions.date.month['abbr']
+      : faker.definitions.date.month['wide']
+  ) as string[];
+}
+
+export function generateWeekdays(abbr?: boolean): string[] {
+  return (
+    abbr
+      ? faker.definitions.date.weekday['abbr']
+      : faker.definitions.date.weekday['wide']
+  ) as string[];
+}
+
+export function generateRandomInt(min: number, max: number) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
