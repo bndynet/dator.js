@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/bndynet/dator.js/compare/v1.1.0...v1.1.1) (2024-08-23)
+
+
+### Bug Fixes
+
+* no exporting for some functions ([944efc1](https://github.com/bndynet/dator.js/commit/944efc12446d488aec1c55cec0c090f500bfbaf6))
+
 # [1.1.0](https://github.com/bndynet/dator.js/compare/v1.0.1...v1.1.0) (2024-08-23)
 
 
